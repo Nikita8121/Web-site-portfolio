@@ -1,0 +1,45 @@
+.services {
+    padding: 95px 0;
+
+    .row {
+        margin-top: 60px;
+    }
+
+    &_block {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+
+        &_icon {
+            width: 76px;
+            height: 76px;
+            color: #3ec6ff;
+            
+        }
+
+        &_title {
+            color: #979797;
+            font-family: Merriweather;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 18.85px;
+            margin: 20px 0 20px 0;
+            text-align: center;
+        }
+
+        &_text {
+            margin: 0;
+            text-align: center;
+            color: #848484;
+            font-family: Roboto;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 17px;
+            padding-bottom: 25px;
+        }
+    }
+
+
+
+}

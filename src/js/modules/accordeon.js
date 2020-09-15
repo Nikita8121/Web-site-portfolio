@@ -3,16 +3,16 @@ const accordion = (triggersSelector) => {
         blocks = document.querySelectorAll(".accordion-block");
 
     function showAccordion(i) {
-        btns[i].classList.add('active-style');
-        blocks[i].classList.add('active-content');
+        btns[i].classList.add('active');
+        blocks[i].classList.add('active');
         blocks[i].style.maxHeight = blocks[i].scrollHeight + 80 + "px";
     }
     function hideAccordion() {
         btns.forEach(item => {
-            item.classList.remove('active-style');
+            item.classList.remove('active');
         });
         blocks.forEach(item => {
-            item.classList.remove('active-content');
+            item.classList.remove('active');
             item.style.maxHeight = '0px';
         });
     }
@@ -21,7 +21,7 @@ const accordion = (triggersSelector) => {
 
     btns.forEach((btn, i) => {
         btn.addEventListener('click', function () {
-            if(btn.classList.contains('active-style')) {
+            if(btn.classList.contains('active')) {
                 hideAccordion();
             } else {
                 hideAccordion();

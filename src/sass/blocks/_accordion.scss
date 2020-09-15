@@ -1,0 +1,81 @@
+.qa {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/accorderonbcg.jpg') center (center / cover) no-repeat;
+    padding: 95px 0;
+    .title{
+        color: #fff;
+    }
+
+    .accordion_wrapper {
+        margin-top: 65px;
+        
+
+        .accordion-heading {
+            padding: 10px 10px 10px 10px;
+            background-color: #AFB1BA;
+            color: #fff;
+            font-size: 18px;
+            font-family: Roboto, "sans-serif";
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            transition: 0.5s all ease;
+
+            &.active {
+                background-color: #3F7FBF;
+                border-bottom: 2px dotted #fff;
+            }
+
+            &.active .arrow-accordion {
+                transform: rotate(180deg);
+            }
+
+            .arrow-accordion {
+
+                display: flex;
+                align-items: center;
+                position: absolute;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                transition: 0.5s all ease;
+
+                div:first-child {
+                    width: 25px;
+                    height: 2px;
+                    background-color: #fff;
+                    transform: rotate(45deg);
+                    position: relative;
+                    left: 3.9px;
+                }
+
+                div:nth-child(2) {
+                    width: 25px;
+                    height: 2px;
+                    position: relative;
+                    right: 3.9px;
+                    background-color: #fff;
+                    transform: rotate(-45deg) !important;
+                }
+            }
+        }
+
+        .accordion-block {
+            background-color: #3F7FBF;
+            color: #fff;
+            font-family: Roboto, "sans-serif";
+            font-weight: 400;
+            max-height: 0;
+            opacity: 0;
+            transition: all 0.3s ease-out;
+            overflow: hidden;
+            &.active {
+                overflow: visible;
+                opacity: 1;
+                
+                padding: 25px 10px 10px 10px;
+            }
+
+        }
+    }
+
+}

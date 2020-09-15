@@ -1,31 +1,46 @@
 {
-  "name": "picture",
+  "name": "start-blank",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
-  "browserslist": [
-    "> 1%",
-    "not dead"
-  ],
   "devDependencies": {
+    "browser-sync": "^2.26.5",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-cli": "^2.2.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^6.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
     "@babel/core": "^7.7.4",
     "@babel/preset-env": "^7.7.4",
     "babel": "^6.23.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^8.0.6",
-    "browser-sync": "^2.26.7",
     "core-js": "^3.4.2",
     "eslint": "^7.7.0",
-    "gulp": "^4.0.2",
     "webpack": "^4.41.2",
     "webpack-stream": "^5.2.1"
   },
+  "browserslist": [
+    "last 1 version",
+    "> 1%",
+    "maintained node versions",
+    "not dead"
+  ],
   "dependencies": {
-    "json-server": "^0.16.1"
+    "gulp-image": "^6.2.1",
+    "jquery": "^3.5.1",
+    "jquery-lazy": "^1.7.11",
+    "lazyload": "^2.0.0-rc.2",
+    "slick-carousel": "^1.8.1",
+    "vanilla-lazyload": "^17.1.2",
+    "wow.js": "^1.2.2"
   }
 }

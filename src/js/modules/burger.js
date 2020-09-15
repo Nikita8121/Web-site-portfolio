@@ -1,26 +1,44 @@
-const burger = (menuSelector, burgerSelector) => {
-    const menuElem = document.querySelector(menuSelector),
-        burgerElem = document.querySelector(burgerSelector);
+const burger = () => {
+    const burger = document.querySelector('.hamburger'),
+        nav = document.querySelector('header nav'),
+        menu = document.querySelector('header ul'),
+        menuitem = document.querySelectorAll('header ul>li'),
+        body = document.querySelector('body');
 
-    menuElem.style.display = 'none';
 
-    burgerElem.addEventListener('click', () => {
-        if (menuElem.style.display == "none" && window.screen.availWidth < 993) {
-            menuElem.style.display = 'block';
-            burgerElem.classList.add('is-active'); 
-        } else {
-            menuElem.style.display = 'none';
-            burgerElem.classList.remove('is-active');
+    burger.addEventListener('click', () => {
+        burger.classList.toggle('is-active');
+        menu.classList.toggle('active');
+
+
+        if (menu.classList.contains('active')) {
+            nav.style.minHeight = `${nav.scrollHeight + 160 + menuitem.scrollHeight}px`;
+            menuitem.forEach((item) => {
+                item.classList.toggle('active');
+            });
         }
     });
 
+    window.addEventListener('scroll',   () => {
 
-    window.addEventListener('resize', () => {
-        if(window.screen.availWidth > 992){
-            menuElem.style.display = 'none';
-            burgerElem.classList.remove('is-active');
-        }
+
+        menuitem.forEach((item, i) => {
+            item.classList.remove('active-section');
+
+            const id = item.childNodes[0].getAttribute('href'),
+                section = document.querySelector(id);
+                if (window.innerHeight + window.scrollY == body.offsetHeight) {
+                    if(item == menu.lastChild){
+                        item.classList.add('active-section');
+                    }
+                    
+                    
+                }else if                            (window.pageYOffset >= section.offsetTop - nav.scrollHeight && window.pageYOffset <= section.offsetTop - nav.scrollHeight + section.scrollHeight) {
+                item.classList.add('active-section');
+            }  
+        });
     });
+
 };
 
 export default burger;

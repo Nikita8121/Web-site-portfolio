@@ -1,0 +1,59 @@
+.aboutme {
+    padding: 95px 0;
+
+    h2 {
+        margin-bottom: 40px;
+    }
+
+    h3 {
+        color: #363636;
+        font-size: 36px;
+        font-weight: 400;
+        line-height: 1;
+        margin-bottom: 45px;
+        text-transform: capitalize;
+    }
+
+    p {
+        color: #999999;
+        font-family: Ubuntu;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 31px;
+        margin-bottom: 49px;
+        color: #999999;
+        font-family: Ubuntu;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 31px;
+        margin-bottom: 49px;
+    }
+
+    .row {
+        div:nth-child(1) {
+            background: url('../images/MyImage.jpg') center (center / cover) no-repeat;
+            height: 600px;
+
+            @media only screen and (max-width: 578px) {
+                height: 375px;
+            }
+        }
+
+        div:nth-child(2) {
+            padding-top: 5px;
+            padding-right: 100px;
+            padding-left: 120px;
+            padding-bottom: 5px;
+            background-color: rgba(239, 239, 239, 0.3);
+
+            @media only screen and (max-width: 578px) {
+                padding-right: 5px;
+                padding-left: 5px;
+            }
+
+            img {
+                margin-bottom: 25px;
+            }
+        }
+    }
+}
